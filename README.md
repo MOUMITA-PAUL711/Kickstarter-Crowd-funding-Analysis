@@ -18,10 +18,10 @@ This repository contains Analysis of the project demonstrating an overview of th
 
  # **Tools & Datasets Used** 🛠️
 
- **Excel:**
- **PowerBI:**
- **Tableau:**
- **MYSQL:**
+ **Excel:** Power Query for Data cleaning & Manipulation, use Power pivot for creating Exsiting Dashboard.
+ **PowerBI:** Data modelling & Creating Dashboard.
+ **Tableau:** Its also use for data modelling & creating another exciting Dashboard.
+ **MYSQL:** Solve the problems like creating database,defining relationship with SQL queries
 
  # **Methodology**🗂️
  The project followed a structured data analysis & visulization workflow:
