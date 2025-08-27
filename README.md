@@ -29,4 +29,20 @@ This repository contains Analysis of the project demonstrating an overview of th
  # **Methodology**🗂️
  The project followed a structured data analysis & visulization workflow:
  
+ ## **1.  Understanding the Object:**
+ The key goal was to analyze Kickstater project trends,success rates & funding behaviors across time & categories.
+
+ ## **2.  Data Preparation:**
+ - Imported raw Kickstater data into Excel.
+ - Cleand & transformed the dataset using Power Query.
+ - Create calender like Year, Quarter,Month,Financial-Quarter for time series analysis.
+
+## **3. Exploratory Data Analysis(EDA):**
+- Explored patterns in project categories, launch dates & funding outcomes.
+- Identified success trends based on goal amount, category & time.
+
+## **4. Dashboard Development:**
+- Built dynamic KPI cards for metrics such as total raised amount, success rate, project counts.
+- Created interactive charts & Dashboard.
+
  
