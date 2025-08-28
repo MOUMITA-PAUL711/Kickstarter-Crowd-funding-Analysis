@@ -74,7 +74,7 @@ i.Almost 74% categories have the highest success rates, closely followed by 70% 
 - Success rates peak in Q2, particulaly in April.
 - On average, successful projects run 31 days from launch to deadline.
 
-# **Funding Patterns:**💵
+# Funding Patterns:💵
 
 - ### **Top-Earning categories:**
 Product Design & tabletop games lead in total funds raised.
