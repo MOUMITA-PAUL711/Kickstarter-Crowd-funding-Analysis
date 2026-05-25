@@ -92,5 +92,3 @@ Successfully funded projects tend to exceed their goals by 20-30%.
 "bash
 Kickstater_Crowdfunding_Analysis/
 Dashboard/
-
-
