@@ -1,94 +1,60 @@
-# **Kickstarter Crowdfunding Analysis**
+# Crowdfunding Dashboard Analytics Dataset
 
-Welcome to the Kickstarter Crowdfunding Analysis with PowerBI & Tableau &Excel Dashboard & mysql queries.🚀
+This repository contains aggregated historical data tables exported from the **Crowdfunding Dashboard**. Featuring detailed breakdowns of campaign trends across global geographies, product categories, success rates, and temporal metrics spanning **2009 to 2019**, this dataset is optimized for exploratory data analysis (EDA), trend identification, and business intelligence (BI) modeling.
 
-This repository contains Analysis of the project demonstrating an overview of the Kickstarter Crowdfunding using PowerBI, Tableau, Excel & mysql. it highlights my ability to transform raw data into meaningful insights & visually compelling stories.
+## 📊 Dataset Structure & Contents
 
-# **Table of Contents**📖
-- [Introduction]()
-- [Tools & Datasets Used]()
-- [Methodology]()
-- [Documentation]()
-- [Insights Findings]()
-- [Repository Structure]()
+The dataset is divided into four focused CSV tables representing different metrics and core dimensions of historical crowdfunding campaigns:
 
-# **Introduction**📁
+### 1. 📍 Projects by Locations
+* **Filename:** `Crowdfunding Dashboard.xlsx - No.of Projects by Locations.csv`
+* **Description:** Tracks the volume of unique crowdfunding projects across global geopolitical hubs.
+* **Core Features:** `Row Labels` (City/State/Country), `Count of id` (Total Launched Projects).
+* **Dataset Scale:** Includes 20,900 unique global locations.
+* **Key Visual Insight:** Heavily dominated by creative tech hubs such as Los Angeles, CA (18,596), New York, NY (14,150), and London, UK (11,468).
 
- Crowdfunding is the practice of funding a project or venture by raising small amounts of money from a large number of people, typically via the Internet.Crowdfunding is a form of crowdsourcing and alternative finance.This Project aims to uncover trends behind successfully funded Kickstater campaigns and explore how project creation patterns evolve throughout the year.
+### 2. 🏷️ Projects by Category
+* **Filename:** `Crowdfunding Dashboard.xlsx - No.of Projects by Category.csv`
+* **Description:** Breaks down market volume across distinct design, media, tech, and artistic categories.
+* **Core Features:** `Row Labels` (Project Category/Sub-category), `Distinct Count of id` (Unique Projects).
+* **Dataset Scale:** 160 distinct operational categories.
+* **Key Visual Insight:** The highest project volumes belong to Product Design (22,277), Tabletop Games (15,618), and Music (15,194).
 
- # **Tools & Datasets Used** 🛠️
+### 3. 📅 Number of Projects by Date
+* **Filename:** `Crowdfunding Dashboard.xlsx - Number of Projects by Date.csv`
+* **Description:** Hierarchical time-series analysis logging crowdfunding platform adoption, growth cycles, and cyclical seasonality.
+* **Core Features:** `Row Labels` (Yearly, Quarterly, and Monthly nesting strings), `Count of id` (Launch Volume).
+* **Dataset Scale:** 80 granular date intervals spanning from initial platform emergence in 2009 through 2019. Peak historic performance occurred between 2014 and 2015.
 
- **Excel:** Power Query for Data cleaning & Manipulation, use Power pivot for creating Exsiting Dashboard.
- 
- **PowerBI:** Data modelling & Creating Dashboard.
- 
- **Tableau:** Its also use for data modelling & creating another exciting Dashboard.
- 
- **MYSQL:** Solve the problems like creating database,defining relationship with SQL queries
+### 4. 📈 Percentage of Successful Projects
+* **Filename:** `Crowdfunding Dashboard.xlsx - Percentage of Successful Projec.csv`
+* **Description:** Success performance metrics across niche project sectors. Useful for risk assessment and predictive analytics.
+* **Core Features:** `Row Labels` (Project Category), `successful_project_rate` (Decimal representation of success percentage).
+* **Dataset Scale:** 160 comparative category rates.
+* **Key Visual Insight:** While product design has volume, specific sub-niches lead in conversion efficiency: Chiptune (76.3%), Residencies (74.0%), and Anthologies (70.1%) yield the highest historical success rates.
 
- # **Methodology**🗂️
- The project followed a structured data analysis & visulization workflow:
- 
- ## **1.  Understanding the Object:**
- The key goal was to analyze Kickstater project trends,success rates & funding behaviors across time & categories.
+---
 
- ## **2.  Data Preparation:**
- - Imported raw Kickstater data into Excel.
- - Cleand & transformed the dataset using Power Query.
- - Create calender like Year, Quarter,Month,Financial-Quarter for time series analysis.
+## 🎯 Primary Use Cases
 
-## **3. Exploratory Data Analysis(EDA):**
-- Explored patterns in project categories, launch dates & funding outcomes.
-- Identified success trends based on goal amount, category & time.
+* **BI Dashboard Prototyping:** Build interactive visual maps and drill-down metrics using Tableau, Microsoft Power BI, Looker Studio, or Excel.
+* **Geospatial Hotspotting:** Use Python or R mapping libraries to plot geographic nodes where distinct niches successfully coordinate backing.
+* **Seasonality Evaluation:** Uncover launch windows (months or quarters) correlating with surges or slowdowns in collective user engagement.
+* **Risk & Probability Modeling:** Evaluate structural relationships between category selections and campaign viability metrics.
 
-## **4. Dashboard Development:**
-- Built dynamic KPI cards for metrics such as total raised amount, success rate, project counts.
-- Created interactive charts & Dashboard.
-- Implemented parameter based on filter for Year,Quarter & Month for dynamic exploration.
+---
 
-## **5. Insight Generation:**
-- Analyzed dashboards to draw meaningful conclusions on what makes a campaign successful.
-- Observed seasonality, categories & goal amount ranges that impact sucess.
+## 🛠️ Code Snippets & Quick Start
 
-# **Documentation** 📄
-- The dashboard layout was designed to present insights in a clean, intuitive & user friendly format.
-- Included mockup files to showcase the initial design concepts & support decision making throughout the dashboard development process.
-- All visulizations and filters are labeled clearly to ensure interpretability for stakeholders. 
-  
-# **Insights Findings**
-From the Dashboard, we were able to find the following answers:
+Get started querying this repository's data files instantly with these native code recipes.
 
-# **Success Factors** 🎯
+### Python (Pandas)
+```python
+import pandas as pd
 
-## **Goal Amount:**
+# Load the categorical success rate dataset
+success_df = pd.read_csv('Crowdfunding Dashboard.xlsx - Percentage of Successful Projec.csv')
 
-i. Projects with goals under 42% have the highest success rates.
-ii. Among backers who contributed between 84% of the funding went to projects in the "Residencies" category, indicating strong support for that category within this funding range.
-
-## **Category:**
-
-i.Almost 74% categories have the highest success rates, closely followed by 70% indicating strong support for that category within this funding range.
-
-## **Time-based Trends:**
-
-- Success rates peak in Q2, particulaly in April.
-- On average, successful projects run 31 days from launch to deadline.
-
-# Funding Patterns:💵
-
-- ### **Top-Earning categories:**
-Product Design & tabletop games lead in total funds raised.
-
-- ### **Average Pledged Amounts:**
-Successfully funded projects tend to exceed their goals by 20-30%.
-
-# **Seasonal Trends**📑
-
-- More projects are launched in the year's first half, but not all perform equally.
-- late Q4 campaigns show lower engagement & funding.
-
-# **Repository Structure**
-
-"bash
-Kickstater_Crowdfunding_Analysis/
-Dashboard/
+# View top 10 highest-performing categories
+highest_success = success_df.sort_values(by='successful_project_rate', ascending=False)
+print(highest_success.head(10))
